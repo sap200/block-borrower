@@ -19,9 +19,7 @@ BlockBorrower is an innovative DeFi lending platform that enables users to inter
 Instructions on how to set up the project locally. For example:
 1. Clone the repository: `git clone https://github.com/sap200/block-borrower`
 2. Install dependencies: `npm install`
-3. Set up your local blockchain or connect to a testnet.
-4. Compile and deploy smart contracts (if applicable).
-5. Run the front-end application: `npm run serve`
+3. Run the front-end application: `npm run serve`
 
 ## Contributing
 Guidelines for contributing to the project. For example:
