@@ -22,7 +22,7 @@
         <router-link to="/my_loan_customer_view" class="rt-lnk" v-if="!isChecked"><b>💲 My Loans</b></router-link><hr  v-if="!isChecked">
         <router-link to="/all_bank_view" class="rt-lnk" ><b>💵 All Banks</b></router-link><hr>
         <router-link to="/auction_list_view" class="rt-lnk" ><b>🎟️ Auction</b></router-link><hr>
-        <a href="https://dancing-gumption-2123f4.netlify.app/" class="rt-lnk" target="_blank"><b>🌉 EVM-XRPL NFT Bridge</b></a><hr>
+        <a href="https://strong-dusk-b787a1.netlify.app/" class="rt-lnk" target="_blank"><b>🌉 EVM-XRPL NFT Bridge</b></a><hr>
         <a href="https://bridge.devnet.xrpl.org/" class="rt-lnk" target="_blank"><b>🖾 EVM-XRPL Bridge</b></a><hr>
 
 
