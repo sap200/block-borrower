@@ -1,4 +1,4 @@
-# BlockBorrower - Decentralized Finance Lending Platform
+# BlockBorrower - DeFi Lending Platform
 
 ## Introduction
 BlockBorrower is an innovative DeFi lending platform that enables users to interact with decentralized finance in a user-friendly way. Built on XRP's EVM Compatible sidechain, BlockBorrower allows users to create or join banks, take out loans, make repayments, and engage in loan auctions in cases of defaults. This platform bridges the gap between traditional banking and decentralized finance, providing a secure and transparent way to handle financial transactions in the blockchain space.
