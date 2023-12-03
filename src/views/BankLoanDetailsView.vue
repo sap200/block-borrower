@@ -3,11 +3,11 @@
       <h2> <b>Loan Details View</b> </h2>
       <hr>
       <div id="btn-cntnr">
-          <Button class="clickable-btn" @click="calculateDues"> Calculate Dues </Button>
-          <Button class="clickable-btn" @click="startAuction" v-if="this.data != null"> Start Auction </Button>
+          <Button class="clickable-btn" @click="calculateDues" :disabled="!data.isActiveLoan" v-if="data != null"> Calculate Dues </Button>
+          <Button class="clickable-btn" @click="startAuction" :disabled="!data.isActiveLoan" v-if="this.data != null"> Start Auction </Button>
           <Button class="clickable-btn" @click="finalizeAuction" :disabled="this.data.auctionState != 1" v-if="this.data != null"> Finalize Auction</Button>
           <Button class="clickable-btn" @click="cancelAuction"  :disabled="this.data.auctionState != 1" v-if="this.data != null"> Cancel Auction </Button>
-          <Button class="clickable-btn" @click="refreshLoan" :disabled="refreshLoanBtnDisabled"> Refresh Loan Status </Button>
+          <Button class="clickable-btn" @click="refreshLoan" :disabled="refreshLoanBtnDisabled || !data.isActiveLoan" v-if="data != null"> Refresh Loan Status </Button>
       </div>
       <p style="color:darkblue; background-color:yellow" v-if="numDues != -1"> <b> Number of times user has defaulted : </b> {{this.numDues}} </p>
       <hr>

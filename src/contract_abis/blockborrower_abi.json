@@ -74,7 +74,7 @@
 		],
 		"name": "claimBalanceFromLoan",
 		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -137,7 +137,7 @@
 			},
 			{
 				"internalType": "address",
-				"name": "nftContract",
+				"name": "nftContractAddress",
 				"type": "address"
 			},
 			{
@@ -317,7 +317,7 @@
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "_auctionSmartContractAddress",
+				"name": "_auctionSmartContract",
 				"type": "address"
 			}
 		],
@@ -437,6 +437,25 @@
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "bankId",
+				"type": "uint256"
+			}
+		],
+		"name": "checkIfActiveLoanExists",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
 			}
 		],
 		"stateMutability": "view",
@@ -583,6 +602,11 @@
 					},
 					{
 						"internalType": "uint256",
+						"name": "lateChargesIncurred",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
 						"name": "amountRepaid",
 						"type": "uint256"
 					},
@@ -612,7 +636,7 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "enum BlockBorrow.AuctionState",
+						"internalType": "enum BlockBorrower.AuctionState",
 						"name": "auctionState",
 						"type": "uint8"
 					},
@@ -635,9 +659,14 @@
 						"internalType": "string",
 						"name": "nftSymbol",
 						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "hasClaimed",
+						"type": "bool"
 					}
 				],
-				"internalType": "struct BlockBorrow.NFT[]",
+				"internalType": "struct BlockBorrower.NFT[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -682,9 +711,9 @@
 			{
 				"components": [
 					{
-						"internalType": "uint32",
+						"internalType": "uint256",
 						"name": "rpsIndex",
-						"type": "uint32"
+						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
@@ -702,7 +731,7 @@
 						"type": "uint256"
 					}
 				],
-				"internalType": "struct BlockBorrow.RepaymentSchedule[]",
+				"internalType": "struct BlockBorrower.RepaymentSchedule[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -806,6 +835,19 @@
 				"internalType": "address",
 				"name": "",
 				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "minimumDepositAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",

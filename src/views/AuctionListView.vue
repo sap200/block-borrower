@@ -95,7 +95,10 @@ export default {
                     const result = await this.getAuctionDetails(myLoanId)
                     //console.log(result)
                     const jsonString = JSON.stringify(result, (key, value) => (typeof value === 'bigint' ? value.toString() : value));
-                    this.cards.push(JSON.parse(jsonString));
+                    const myResult = JSON.parse(jsonString);
+                    if(myResult.auctionId != 0) {
+                        this.cards.push(JSON.parse(jsonString));
+                    }
                   }
               }
           }

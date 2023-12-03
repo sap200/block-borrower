@@ -89,7 +89,9 @@ export default {
       const web3i = new web3(EVM_SIDECHAIN_RPC);
       try {
           const contract = new web3i.eth.Contract(blockBorrowerAbi, BLOCKBORROWER_CONTRACT_ADDRESS);
-          let result = await contract.methods.getAllNftDepositsOfBank(bankId, customerAddress).call({from:customerAddress})
+          console.log("INitialized contract:: ")
+          let result = await contract.methods.getAllNftDepositsOfBank(bankId, customerAddress).call()
+          console.log("i got result")
           const jsonString = JSON.stringify(result, (key, value) => (typeof value === 'bigint' ? value.toString() : value));
 
           return JSON.parse(jsonString);

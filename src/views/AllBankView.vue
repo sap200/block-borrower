@@ -51,6 +51,8 @@ export default {
 
       bankNumberSearchHere() {
           this.msgData = "Searching..."
+          console.log("HEre")
+          this.cards = []
           if(this.bankNumberSearch == 0) {
               this.getAllBanks();
               return;

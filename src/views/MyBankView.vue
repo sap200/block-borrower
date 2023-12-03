@@ -32,7 +32,7 @@
                     <td class="td-value"> {{bankData.loanPercentage}}% </td>
                     <td class="td-heading"> <b>Defaulting Limit</b> </td>
                     <td class="td-value"> {{bankData.defaultingLimit}} </td>
-                    <td class="td-heading"> <b> Defaulting TIme Limit </b></td>
+                    <td class="td-heading"> <b> Defaulting Time Limit </b></td>
                     <td class="td-value"> {{bankData.defaultingTimeLimit/(60*60)}} hours </td>
                 </tr>
             </tbody>

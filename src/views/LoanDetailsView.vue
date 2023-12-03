@@ -4,7 +4,7 @@
       <hr>
       <div id="btn-cntnr">
           <Button class="clickable-btn" @click="withdrawNFT" :disabled="data.isActiveLoan || Number(data.auctionState != 0) || withdrawNFTButtonDisabled" v-if="data != null"> Withdraw NFT </Button>
-          <Button class="clickable-btn" @click="claimBalance" :disabled="data.isActiveLoan || data.amountRepaid <= data.repaymentAmount" v-if="data != null"> Claim Balance </Button>
+          <Button class="clickable-btn" @click="claimBalance" :disabled="data.isActiveLoan || data.hasClaimed" v-if="data != null"> Claim Balance </Button>
           <Button class="clickable-btn" @click="refreshLoan" :disabled="refreshLoanBtnDisabled"> Refresh Loan </Button>
       </div>
       <hr>
